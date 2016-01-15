@@ -11,12 +11,12 @@ import com.topsportsnews.app.models.SportsItem;
 
 
 public class DetailActivity extends AppCompatActivity {
-    ImageView imageView;
-    TextView titleText;
-    TextView imageCaptionText;
-    TextView bylineText;
-    TextView publishedDateText;
-    TextView descriptionText;
+    private ImageView imageView;
+    private TextView titleText;
+    private TextView imageCaptionText;
+    private TextView bylineText;
+    private TextView publishedDateText;
+    private TextView descriptionText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,19 +30,13 @@ public class DetailActivity extends AppCompatActivity {
 
 
         SportsItem sportsItem = (SportsItem) getIntent().getSerializableExtra("sportsItem");
-        String imageUrl = sportsItem.getThumbnail();
-        String title = sportsItem.getTitle();
-        String imageCaption = sportsItem.getImageCaption();
-        String byline = sportsItem.getByline();
-        String publishedDate = sportsItem.getPublishedDate();
-        String description = sportsItem.getDescription();
+      if(sportsItem!=null)
+      {   Picasso.with(DetailActivity.this).load(sportsItem.getThumbnail()).into(imageView);
+        titleText.setText(sportsItem.getTitle());
+        bylineText.setText(sportsItem.getByline());
+        imageCaptionText.setText(sportsItem.getImageCaption());
+        publishedDateText.setText("Published on " + sportsItem.getPublishedDate());
+        descriptionText.setText("Stroy - "+sportsItem.getDescription());
 
-        Picasso.with(DetailActivity.this).load(imageUrl).into(imageView);
-        titleText.setText(title);
-        bylineText.setText(byline);
-        imageCaptionText.setText(imageCaption);
-        publishedDateText.setText("Published on " + publishedDate);
-        descriptionText.setText("Stroy - "+description);
-
-    }
+    }}
 }

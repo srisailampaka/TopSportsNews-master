@@ -7,7 +7,7 @@ import com.topsportsnews.app.models.SportsItem;
 import java.util.List;
 
 /**
- * Created by omkardokur on 1/14/16.
+ * Created by Srisailam on 1/14/16.
  */
 public interface ResultsCallback {
 

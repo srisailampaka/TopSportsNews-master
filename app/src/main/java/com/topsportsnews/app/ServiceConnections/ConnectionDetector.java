@@ -6,7 +6,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
 /**
- * Created by omkardokur on 12/21/15.
+ * Created by Srisailam on 12/21/15.
  */
 public class ConnectionDetector {
     private Context mContext;

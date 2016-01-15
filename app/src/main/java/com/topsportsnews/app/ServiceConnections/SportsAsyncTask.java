@@ -21,14 +21,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by omkardokur on 1/14/16.
+ * Created by Srisailam on 1/14/16.
  */
 public class SportsAsyncTask extends AsyncTask<String, Void, List<SportsItem>> {
     private ProgressDialog progressDialog;
     private ResultsCallback resultCallback;
     private Context context;
     private List<SportsItem> sportsItemList;
-    private static final String TAG = "RecyclerViewExample";
+    private static final String TAG = "SportsAsyncTask";
     public SportsAsyncTask(ResultsCallback resultCallback,Context context) {
         this.context = context;
         this.resultCallback =resultCallback;
